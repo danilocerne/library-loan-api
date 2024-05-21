@@ -2,7 +2,7 @@
 
 namespace App\Http\Repositories\Contracts;
 
-interface AuthorRepositoryInterface
+interface BookRepositoryInterface
 {
     public function getListBook();
     public function getBookById(int $id);

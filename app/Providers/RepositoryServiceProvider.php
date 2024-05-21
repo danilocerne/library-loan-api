@@ -47,7 +47,7 @@ class RepositoryServiceProvider extends ServiceProvider
 
         $this->app->bind(
             BookRepositoryInterface::class,
-            BookrRepository::class
+            BookRepository::class
         );
 
         $this->app->bind(
