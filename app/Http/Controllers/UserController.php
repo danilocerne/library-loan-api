@@ -77,7 +77,6 @@ class UserController extends Controller
         return UserResource::collection($user);
     }
 
-    //register route
     public function store(StoreUpdateUser $request)
     {
         $data = $request->validate([
