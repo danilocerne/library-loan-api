@@ -17,9 +17,9 @@ Library Book Lending Management API Conceptual Model
 
 You must have installed the following programs:
 
-PHP 8.3.7
-Composer 2.7.6
-MySQL 8.0.37
+- PHP 8.3.7
+- Composer 2.7.6
+- MySQL 8.0.37
 
 ## Running the API in a development environment
 
@@ -27,13 +27,14 @@ Once you have cloned the Github repository to your local machine, do:
 
 Run the commands to create the database and populate all the Library Book Lending Management API tables:
 
-php artisan migrate:fresh
-php artisan db:seed
+- php artisan migrate:fresh
+- php artisan db:seed
+- php artisan serve
 
 Other commands:
  
-php artisan optimize:clear
-composer dump-autoload -o
+- php artisan optimize:clear
+- composer dump-autoload -o
 
 ## Problem that occurred in Laravel 11 after writing all Controllers, Services, Repositories and Models classes:
 
@@ -43,9 +44,9 @@ I chose to use Laravel 11 and 2 days ago I encountered a problem using automatic
 
 Below is a print of the error I found via Postman and executing the command:
 
-<p align="center"><img src="https://github.com/danilocerne/library-loan-api/blob/master/error_target_is_not_instantiable_whiling_building.png" alt="Modelo Conceitual"></p>
+- php artisan route:list
 
-php artisan route:list
+<p align="center"><img src="https://github.com/danilocerne/library-loan-api/blob/master/error_target_is_not_instantiable_whiling_building.png" alt="Modelo Conceitual"></p>
 
 As I explained above, without the automatic injection of dependencies working, my delivery was delayed. Unfortunately, in 4 days, that's what I managed to do. But I will keep trying to solve this problem! As soon as I solve this problem I will continue testing all the api.php routes, I would test the JWT authentication that I created with Sanctum, I would create the unit and integration tests and finally I would implement the triggering of emails using the queues of the Laravel.
 
@@ -55,15 +56,17 @@ In the design (Conceptual Model) that I added in the Readme of this project, I a
 Tip:
 
 After executed:
-php artisan migrate:fresh
-php artisan db:seed
+
+- php artisan migrate:fresh
+- php artisan db:seed
+- php artisan serve
 
 In the database, run:
 
-select * from groups;
+- select * from groups;
 // Here it will show two types of groups: Administrator and Regular User.
 
-select * from permissions;
+- select * from permissions;
 // Here it will show all the permissions that each of the user groups above have.
 
 Note that the user in the Administrator group has permission to make all registrations and borrow books. The user in the Common User group is only allowed to borrow books.
