@@ -21,8 +21,9 @@ class StoreUpdateBookAuthor extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
+        $rules = [
+            'store_id' => 'required',
+            'book_id' => 'required',
         ];
     }
 }

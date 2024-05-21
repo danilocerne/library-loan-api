@@ -79,13 +79,7 @@ class UserController extends Controller
 
     public function store(StoreUpdateUser $request)
     {
-        $data = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|string|unique:users,email',
-            'password' => 'required|string|confirmed'
-        ]);
-
-        $user = $this->userService->createUser($data);
+        $user = $this->userService->createUser($request->all());
 
         $token = $user->createToken('auth_token')->plainTextToken;
 

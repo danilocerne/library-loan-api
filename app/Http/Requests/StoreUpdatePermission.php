@@ -21,8 +21,10 @@ class StoreUpdatePermission extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
+        $rules = [
+            'name' => 'required|min:3',
+            'description' => 'required|min:3',
+            'group_id' => 'required',
         ];
     }
 }

@@ -21,8 +21,8 @@ class StoreUpdateUserType extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
+        $rules = [
+            'name' => 'required|min:3',
         ];
     }
 }

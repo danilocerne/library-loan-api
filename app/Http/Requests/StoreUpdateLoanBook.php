@@ -21,8 +21,9 @@ class StoreUpdateLoanBook extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
+        $rules = [
+            'loan_id' => 'required',
+            'book_id' => 'required',
         ];
     }
 }
