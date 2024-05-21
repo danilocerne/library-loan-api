@@ -43,6 +43,8 @@ I chose to use Laravel 11 and 2 days ago I encountered a problem using automatic
 
 Below is a print of the error I found via Postman and executing the command:
 
+<p align="center"><img src="https://github.com/danilocerne/library-loan-api/blob/master/error_target_is_not_instantiable_whiling_building.png" alt="Modelo Conceitual"></p>
+
 php artisan route:list
 
 As I explained above, without the automatic injection of dependencies working, my delivery was delayed. Unfortunately, in 4 days, that's what I managed to do. But I will keep trying to solve this problem! As soon as I solve this problem I will continue testing all the api.php routes, I would test the JWT authentication that I created with Sanctum, I would create the unit and integration tests and finally I would implement the triggering of emails using the queues of the Laravel.
