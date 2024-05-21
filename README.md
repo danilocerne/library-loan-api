@@ -51,3 +51,19 @@ As I explained above, without the automatic injection of dependencies working, m
 
 Observation:
 In the design (Conceptual Model) that I added in the Readme of this project, I added the entities UserType, Group, Permission. My idea was after implementing the authentication/authorization of routes with the Sanctum JWT token, after the user authenticated I would check if the user trying to access the create route (for example) has permission to access that route. Basically the idea was to create a personalized ACL CRUD, assigning in the registration whether or not the user has permission to access that route. This personalized registration makes it possible not only to check whether the user has access to such routes, but also to register any type of permission. For example, permission to upload an image within their profile.
+
+Tip:
+
+After executed:
+php artisan migrate:fresh
+php artisan db:seed
+
+In the database, run:
+
+select * from groups;
+// Here it will show two types of groups: Administrator and Regular User.
+
+select * from permissions;
+// Here it will show all the permissions that each of the user groups above have.
+
+Note that the user in the Administrator group has permission to make all registrations and borrow books. The user in the Common User group is only allowed to borrow books.
