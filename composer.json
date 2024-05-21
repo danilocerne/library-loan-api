@@ -22,6 +22,11 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
+            "App\\Models\\": "app/Models/",
+            "App\\Http\\Controllers\\": "app/Http/Controllers/",
+            "App\\Http\\Services\\": "app/Http/Services/",
+            "App\\Http\\Repositories\\Contracts\\": "app/Http/Repositories/Contracts/",
+            "App\\Http\\Repositories\\": "app/Http/Repositories/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
