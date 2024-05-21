@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace App\Http\Services;
 
-use App\Repositories\Contracts\UserTypeRepositoryInterface;
-use Illuminate\Support\Str;
+use App\Http\Repositories\Contracts\UserTypeRepositoryInterface;
 
 class UserTypeService
 {

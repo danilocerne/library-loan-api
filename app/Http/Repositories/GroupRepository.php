@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Http\Repositories;
 
-use App\Repositories\Contracts\GroupRepositoryInterface;
+use App\Http\Repositories\Contracts\GroupRepositoryInterface;
 use App\Model\Group;
 
 class GroupRepository implements GroupRepositoryInterface

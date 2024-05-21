@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\GroupService;
+use App\Http\Services\GroupService;
 use App\Http\Requests\StoreUpdateGroup;
 use App\Http\Resources\GroupResource;
 

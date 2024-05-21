@@ -5,6 +5,7 @@ select * from job_batches;
 select * from jobs;
 select * from migrations;
 select * from password_reset_tokens;
+select * from personal_access_tokens;
 select * from sessions;
 
 

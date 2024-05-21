@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\PermissionService;
+use App\Http\Services\PermissionService;
 use App\Http\Requests\StoreUpdatePermission;
 use App\Http\Resources\PermissionResource;
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\UserTypeService;
+use App\Http\Services\UserTypeService;
 use App\Http\Requests\StoreUpdateUserType;
 use App\Http\Resources\UserTypeResource;
 

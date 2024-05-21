@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\LoanService;
+use App\Http\Services\LoanService;
 use App\Http\Requests\StoreUpdateLoan;
 use App\Http\Resources\LoanResource;
 

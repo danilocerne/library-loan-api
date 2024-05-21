@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace App\Http\Services;
 
-use App\Repositories\Contracts\UserRepositoryInterface;
-use Illuminate\Support\Str;
+use App\Http\Repositories\Contracts\UserRepositoryInterface;
 
 class UserService
 {
@@ -31,6 +30,16 @@ class UserService
     public function getUserById(int $id)
     {
         return $this->userRepository->getUserById($id);
+    }
+
+    /**
+     * Get user by email
+     * @param int $email
+     * @return object
+     */
+    public function getUserByEmail(int $email)
+    {
+        return $this->userRepository->getUserByEmail($email);
     }
 
     /**

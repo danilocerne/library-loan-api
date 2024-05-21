@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Http\Repositories;
 
-use App\Repositories\Contracts\BookAuthorRepositoryInterface;
+use App\Http\Repositories\Contracts\BookAuthorRepositoryInterface;
 use App\Model\BookAuthor;
 
 class BookAuthorRepository implements BookAuthorRepositoryInterface

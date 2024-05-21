@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\AuthorService;
+use App\Http\Services\AuthorService;
 use App\Http\Requests\StoreUpdateAuthor;
 use App\Http\Resources\AuthorResource;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Http\Repositories;
 
-use App\Repositories\Contracts\UserRepositoryInterface;
+use App\Http\Repositories\Contracts\UserRepositoryInterface;
 use App\Model\User;
 
 class UserRepository implements UserRepositoryInterface
@@ -18,7 +18,7 @@ class UserRepository implements UserRepositoryInterface
      * Get all users
      * @return array
      */
-    public function getListUser()
+    public function getListUsers()
     {
         return $this->entity->paginate();
     }
@@ -31,6 +31,16 @@ class UserRepository implements UserRepositoryInterface
     public function getUserById(int $id)
     {
         return $this->entity->where('id', $id)->first();
+    }
+
+    /**
+     * Get user by email
+     * @param int $email
+     * @return object
+     */
+    public function getUserByEmail(string $email)
+    {
+        return $this->entity->where('email', $email)->first();
     }
 
     /**

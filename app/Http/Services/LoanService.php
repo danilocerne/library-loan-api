@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace App\Http\Services;
 
-use App\Repositories\Contracts\LoanRepositoryInterface;
-use Illuminate\Support\Str;
+use App\Http\Repositories\Contracts\LoanRepositoryInterface;
 
 class LoanService
 {

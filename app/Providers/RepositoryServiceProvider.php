@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
-use App\Repositories\Contracts\{
+use Illuminate\Support\ServiceProvider;
+
+use App\Http\Repositories\Contracts\{
     AuthorRepositoryInterface,
     BookAuthorRepositoryInterface,
     BookRepositoryInterface,
@@ -14,7 +16,17 @@ use App\Repositories\Contracts\{
     UserTypeRepositoryInterface
 };
 
-use Illuminate\Support\ServiceProvider;
+use App\Http\Repositories\{
+    AuthorRepository,
+    BookAuthorRepository,
+    BookRepository,
+    GroupRepository,
+    LoanBookRepository,
+    LoanRepository,
+    PermissionRepository,
+    UserRepository,
+    UserTypeRepository
+};
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -24,48 +36,48 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(
-            AuthorRepositoryInterface::Class,
-            AuthorRepository::Class
+            AuthorRepositoryInterface::class,
+            AuthorRepository::class
         );
 
         $this->app->bind(
-            BookAuthorRepositoryInterface::Class,
-            BookAuthorRepository::Class
+            BookAuthorRepositoryInterface::class,
+            BookAuthorRepository::class
         );
 
         $this->app->bind(
-            BookRepositoryInterface::Class,
-            BookrRepository::Class
+            BookRepositoryInterface::class,
+            BookrRepository::class
         );
 
         $this->app->bind(
-            GroupRepositoryInterface::Class,
-            GroupRepository::Class
+            GroupRepositoryInterface::class,
+            GroupRepository::class
         );
 
         $this->app->bind(
-            LoanBookRepositoryInterface::Class,
-            LoanBookRepository::Class
+            LoanBookRepositoryInterface::class,
+            LoanBookRepository::class
         );
 
         $this->app->bind(
-            LoanRepositoryInterface::Class,
-            LoanRepository::Class
+            LoanRepositoryInterface::class,
+            LoanRepository::class
         );
 
         $this->app->bind(
-            PermissionRepositoryInterface::Class,
-            PermissionRepository::Class
+            PermissionRepositoryInterface::class,
+            PermissionRepository::class
         );
 
         $this->app->bind(
-            UserRepositoryInterface::Class,
-            UserRepository::Class
+            UserRepositoryInterface::class,
+            UserRepository::class
         );
 
         $this->app->bind(
-            UserTypeRepositoryInterface::Class,
-            UserTypeRepository::Class
+            UserTypeRepositoryInterface::class,
+            UserTypeRepository::class
         );
     }
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Http\Repositories;
 
-use App\Repositories\Contracts\LoanRepositoryInterface;
+use App\Http\Repositories\Contracts\LoanRepositoryInterface;
 use App\Model\Loan;
 
 class LoanRepository implements LoanRepositoryInterface

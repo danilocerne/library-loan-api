@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Http\Repositories;
 
-use App\Repositories\Contracts\UserTypeRepositoryInterface;
+use App\Http\Repositories\Contracts\UserTypeRepositoryInterface;
 use App\Model\UserType;
 
 class UserTypeRepository implements UserTypeRepositoryInterface
